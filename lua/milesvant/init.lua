@@ -1,11 +1,6 @@
 require("milesvant.remap")
 require("milesvant.packer")
-
-vim.o.background = "dark" -- or "light" for light mode
-vim.cmd([[colorscheme gruvbox]])
-
--- Display line number
-vim.wo.number = true
+require("milesvant.opts")
 
 -- Remaps
 vim.g.mapleader = ","
@@ -25,3 +20,6 @@ keymap_once("n", "<leader>1", function()
   vim.api.nvim_command('split')
   vim.api.nvim_command('wincmd h')
 end)
+
+keymap_once("v", "J", ":m '>+1<CR>gv=gv")
+keymap_once("v", "K", ":m '>-2<CR>gv=gv")
