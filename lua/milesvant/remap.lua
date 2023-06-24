@@ -20,21 +20,3 @@ function keymap_once(mode, key, command)
   vim.keymap.set(mode, key, command)
   table.insert(USER_KEYMAPS[mode], key_fixed)
 end
-
-vim.g.mapleader = ","
-keymap_once("n", "<leader>pv", "<cmd>Ex<CR>")
-
--- Split pane and navigation shortcuts
-keymap_once("n", "<leader>s", "<cmd>sp<CR><C-w><C-j>")
-keymap_once("n", "<leader>v", "<cmd>vsp<CR><C-w><C-l>")
-keymap_once("n", "<C-h>", "<C-w><C-h>")
-keymap_once("n", "<C-j>", "<C-w><C-j>")
-keymap_once("n", "<C-k>", "<C-w><C-k>")
-keymap_once("n", "<C-l>", "<C-w><C-l>")
-
-keymap_once("n", "<leader>1", function()
-  vim.api.nvim_command('vsplit')
-  vim.api.nvim_command('wincmd l')
-  vim.api.nvim_command('split')
-  vim.api.nvim_command('wincmd h')
-end)
