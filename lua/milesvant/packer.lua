@@ -12,10 +12,7 @@ use {
   requires = { {'nvim-lua/plenary.nvim'} }
 }
 
-use {
-    'lalitmee/cobalt2.nvim',
-    requires = 'tjdevries/colorbuddy.nvim'
-}
+use { "ellisonleao/gruvbox.nvim" }
 
 use {
     'nvim-treesitter/nvim-treesitter',
@@ -33,6 +30,5 @@ use {
         require('Comment').setup()
     end
 }
-
 end)
 
