@@ -6,3 +6,4 @@ vim.cmd([[colorscheme gruvbox]])
 
 -- Display line number
 vim.wo.number = true
+

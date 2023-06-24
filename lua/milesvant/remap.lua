@@ -1,8 +1,40 @@
-vim.g.mapleader = ","
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+-- Global table of all user defined keymaps
+USER_KEYMAPS = {}
 
--- Split pane navigation shortcuts
-vim.api.nvim_set_keymap("n", "<C-h>", "<C-w><C-h>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<C-j>", "<C-w><C-j>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<C-k>", "<C-w><C-k>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<C-l>", "<C-w><C-l>", { noremap = true, silent = true })
+-- Set a user-defined keymap, printing an error if it overrides a previous one
+function keymap_once(mode, key, command)
+  local key_fixed = key:gsub('<C%-[%l]>', function(c) return c:upper() end)
+
+  if not USER_KEYMAPS[mode] then
+    USER_KEYMAPS[mode] = {}
+  end
+
+  for _, map_key in pairs(USER_KEYMAPS[mode]) do
+    if map_key == key_fixed then
+      print('Warning: key sequence ' .. key .. ' is already mapped')
+      return
+    end
+  end
+
+  -- vim.api.nvim_set_keymap(mode, key, command, options)
+  vim.keymap.set(mode, key, command)
+  table.insert(USER_KEYMAPS[mode], key_fixed)
+end
+
+vim.g.mapleader = ","
+keymap_once("n", "<leader>pv", "<cmd>Ex<CR>")
+
+-- Split pane and navigation shortcuts
+keymap_once("n", "<leader>s", "<cmd>sp<CR><C-w><C-j>")
+keymap_once("n", "<leader>v", "<cmd>vsp<CR><C-w><C-l>")
+keymap_once("n", "<C-h>", "<C-w><C-h>")
+keymap_once("n", "<C-j>", "<C-w><C-j>")
+keymap_once("n", "<C-k>", "<C-w><C-k>")
+keymap_once("n", "<C-l>", "<C-w><C-l>")
+
+keymap_once("n", "<leader>1", function()
+  vim.api.nvim_command('vsplit')
+  vim.api.nvim_command('wincmd l')
+  vim.api.nvim_command('split')
+  vim.api.nvim_command('wincmd h')
+end)
