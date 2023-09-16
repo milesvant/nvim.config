@@ -4,7 +4,7 @@
 if [[ "$OSTYPE" == "darwin"* ]]; then
     brew list -q node || brew install node
 elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
-    sudo apt install -y node
+    sudo apt install -y nodejs
 fi
 
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
