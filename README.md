@@ -21,3 +21,4 @@ To setup tokyonight gnome-shell:
 
 To setup tokyonight gnome-terminal:
 1. `dconf load /org/gnome/terminal/ < ~/.config/nvim/tokyonight-gnome-terminal.txt`
+2. Go to Terminal -> 'Preferences' at the top of the desktop to change which tokyonight version the gnome-terminal uses
