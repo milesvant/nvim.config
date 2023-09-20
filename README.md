@@ -6,7 +6,7 @@ To setup, run the following steps in terminal:
 2. `mv nvim.config ~/.config/nvim`
 3. `cd ~/.config/nvim`
 4. `./setup.sh`
-5. echo 'alias vi=nvim' >> ~/.bashrc 
+5. echo `alias vi=nvim` >> ~/.bashrc 
 6. `nvim .`
 7. When nvim opens up, run `:PackerSync` twice.
 
