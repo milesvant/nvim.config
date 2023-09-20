@@ -1,6 +1,6 @@
 -- Colors
 vim.opt.background = "dark"
-vim.cmd([[colorscheme tokyonight]])
+vim.cmd([[colorscheme tokyonight-moon]])
 
 -- Display relative and absolute line number
 vim.opt.nu = true
