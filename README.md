@@ -2,8 +2,8 @@
 
 To setup, run the following steps in terminal:
 
-1. `git clone https://github.com/kerrylu/nvim.git`
-2. `mv nvim.config ~/.config/nvim`
+1. `https://github.com/kerrylu/nvim.config.git`
+2. `cp -r nvim.config ~/.config/nvim`
 3. `cd ~/.config/nvim`
 4. `./setup.sh`
 6. `nvim .`
@@ -18,7 +18,6 @@ To setup tokyonight gnome-shell:
 5. Go to Applications -> Open 'Extensions' -> Turn on 'user-themes'
 6. Run `gnome-tweaks` in terminal
 7. Go to the appearance tab and change eligible themes to Tokyonight Dark-BL
-8. `echo 'GTK_THEME=Tokyonight-Dark-BL' | sudo tee -a /etc/environment`
 
 To setup tokyonight gnome-terminal:
 
