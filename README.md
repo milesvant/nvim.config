@@ -7,3 +7,5 @@ To setup, run the following steps in terminal:
 3. `cd ~/.config/nvim`
 4. `./setup.sh`
 5. When nvim opens up, run `:PackerSync` twice.
+
+Note: on MacOS custom color schemes will generally fail on the default terminal. I recommend using [iTerm2](https://iterm2.com/).
