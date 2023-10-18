@@ -24,3 +24,5 @@ To setup tokyonight gnome-terminal:
 
 1. `dconf load /org/gnome/terminal/ < ~/.config/nvim/tokyonight-gnome-terminal.txt`
 2. Go to Terminal -> 'Preferences' at the top of the desktop and right click Tokyonight-Moon and set as default
+
+Note: on MacOS custom color schemes will generally fail on the default terminal. I recommend using [iTerm2](https://iterm2.com/).
