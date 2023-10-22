@@ -1,4 +1,4 @@
-require("milesvant/remap")
+require("modules/remap")
 local builtin = require('telescope.builtin')
 
 keymap_once('n', '<leader>pf', builtin.find_files, {})
