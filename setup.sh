@@ -25,9 +25,12 @@ sudo ln -s /squashfs-root/AppRun /usr/bin/nvim
 
 echo 'alias vi=nvim' >> ~/.bashrc 
 
-# xclip
+# xclip clipboard
 sudo apt-get update
 sudo apt-get install xclip
+
+# telescope live_grep
+sudo apt-get install ripgrep
 
 # packer
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
