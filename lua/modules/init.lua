@@ -4,7 +4,7 @@ require("modules.opts")
 
 -- Remaps
 vim.g.mapleader = ","
-keymap_once("n", "<leader>pv", "<cmd>Ex<CR>")
+keymap_once("n", "<leader>q", "<cmd>Ex<CR>")
 
 -- Split pane and navigation shortcuts
 keymap_once("n", "<leader>s", "<cmd>sp<CR><C-w><C-j>")
