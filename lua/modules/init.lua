@@ -1,6 +1,6 @@
-require("milesvant.remap")
-require("milesvant.packer")
-require("milesvant.opts")
+require("modules.remap")
+require("modules.packer")
+require("modules.opts")
 
 -- Remaps
 vim.g.mapleader = ","

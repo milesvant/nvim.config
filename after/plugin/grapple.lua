@@ -1,5 +1,5 @@
 require("grapple")
-require("milesvant.remap")
+require("modules.remap")
 
 keymap_once("n", "<leader>t", require("grapple").tag)
 keymap_once("n", "<leader>u", require("grapple").untag)
