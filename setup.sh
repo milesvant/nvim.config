@@ -37,6 +37,10 @@ sudo apt-get install ripgrep
 sudo apt-get install npm
 sudo npm i -g pyright 
 
+# c, cpp, objc, objcpp, cuda, proto
+sudo apt-get install clangd-15
+sudo update-alternatives --install /usr/bin/clangd clangd /usr/bin/clangd-15 100
+
 # packer
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim 2> /dev/null

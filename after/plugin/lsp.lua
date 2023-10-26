@@ -2,7 +2,10 @@ require("modules/remap")
 
 -- Setup language servers.
 local lspconfig = require('lspconfig')
+-- python
 lspconfig.pyright.setup {}
+-- c, cpp, objc, objcpp, cuda, proto
+lspconfig.clangd.setup{}
 
 -- Global mappings.
 
