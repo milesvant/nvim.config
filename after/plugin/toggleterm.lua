@@ -9,6 +9,7 @@ function _G.set_terminal_keymaps()
     keymap_once('t', '<C-k>', [[<Cmd>wincmd k<CR>]], opts)
     keymap_once('t', '<C-l>', [[<Cmd>wincmd l<CR>]], opts)
     keymap_once('t', '<C-w>', [[<C-\><C-n><C-w>]], opts)
+    keymap_once('t', '<C-t>', [[<cmd>ToggleTerm<CR>]], opts)
 end
 
 -- if you only want these mappings for toggle term use term://*toggleterm#* instead

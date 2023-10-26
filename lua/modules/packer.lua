@@ -36,9 +36,14 @@ use {
     end
 }
 
-use {"akinsho/toggleterm.nvim", tag = '*', config = function()
-  require("toggleterm").setup()
-end}
+use {
+    "akinsho/toggleterm.nvim", tag = '*',
+    config = function()
+        require("toggleterm").setup()
+    end
+}
+
+use { "neovim/nvim-lspconfig" }
 
 end)
 
