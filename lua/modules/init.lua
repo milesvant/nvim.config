@@ -23,3 +23,7 @@ end)
 
 -- paste without overwriting register
 vim.api.nvim_set_keymap('v', 'p', 'P', { noremap = true })
+
+-- Visual selection -> move one line up or down
+keymap_once("v", "J", ":m'>+1<CR>gv=gv")
+keymap_once("v", "K", ":m'<-2<CR>gv=gv")
