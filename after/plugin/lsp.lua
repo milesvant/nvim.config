@@ -5,7 +5,16 @@ local lspconfig = require('lspconfig')
 -- python
 lspconfig.pyright.setup {}
 -- c, cpp, objc, objcpp, cuda, proto
-lspconfig.clangd.setup{}
+lspconfig.clangd.setup{
+    cmd = {
+        "clangd",
+        "--clang-tidy",
+        "--background-index",
+        "--suggest-missing-includes",
+        "--compile-commands-dir=~/.config/clangd/config.yaml",
+    },
+    filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto", "hpp" },
+}
 
 -- Global mappings.
 

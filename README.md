@@ -5,7 +5,8 @@ To setup, run the following steps in terminal:
 1. `git clone https://github.com/kerrylu/nvim.config.git`
 2. `cp -r nvim.config ~/.config/nvim`
 3. `cd ~/.config/nvim`
-4. `./setup.sh`
+4. `cp -r clangd/ ~/.config/clangd`
+5. `./setup.sh`
 6. `nvim .`
 7. When nvim opens up, run `:PackerSync` twice.
 8. If you want to use copilot, run `:Copilot setup`.
