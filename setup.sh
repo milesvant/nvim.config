@@ -38,8 +38,10 @@ sudo apt-get install npm
 sudo npm i -g pyright 
 
 # c, cpp, objc, objcpp, cuda, proto
-sudo apt-get install clangd-15
-sudo update-alternatives --install /usr/bin/clangd clangd /usr/bin/clangd-15 100
+wget https://apt.llvm.org/llvm.sh
+chmod +x llvm.sh
+sudo ./llvm.sh 16
+sudo update-alternatives --install /usr/bin/clangd clangd /usr/bin/clangd-16 100
 
 # packer
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
