@@ -45,5 +45,7 @@ use {
 
 use { "neovim/nvim-lspconfig" }
 
+use { "sindrets/diffview.nvim" }
+
 end)
 
