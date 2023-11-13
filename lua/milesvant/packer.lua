@@ -17,7 +17,7 @@ use {
   requires = { 'nvim-tree/nvim-web-devicons', opt = true }
 }
 
-use { "ellisonleao/gruvbox.nvim" }
+use { "folke/tokyonight.nvim" }
 
 use {
     'nvim-treesitter/nvim-treesitter',
