@@ -24,9 +24,9 @@ use {
     run = ':TSUpdate'
 }
 
+use "nvim-tree/nvim-web-devicons"
 use {
     "cbochs/grapple.nvim",
-    tag = "0.15.1",
     requires = { "nvim-lua/plenary.nvim", "nvim-tree/nvim-web-devicons" },
 }
 
