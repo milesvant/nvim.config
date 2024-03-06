@@ -26,3 +26,10 @@ keymap_once("v", "K", ":m '>-2<CR>gv=gv")
 
 -- Tab navigation keymaps
 keymap_once("n", "<leader>o", "<cmd>tabnew<CR>")
+
+-- Omnifunc maped to ,, for easier completions.
+keymap_once("i", ",,", "<C-x><C-o>")
+
+-- Setup LSP
+require'lspconfig'.pyright.setup{}
+

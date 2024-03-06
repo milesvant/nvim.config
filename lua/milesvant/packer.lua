@@ -26,7 +26,8 @@ use {
 
 use {
     "cbochs/grapple.nvim",
-    requires = { "nvim-lua/plenary.nvim" },
+    tag = "0.15.1",
+    requires = { "nvim-lua/plenary.nvim", "nvim-tree/nvim-web-devicons" },
 }
 
 use {
@@ -35,5 +36,8 @@ use {
         require('Comment').setup()
     end
 }
+
+use 'neovim/nvim-lspconfig'
+
 end)
 
