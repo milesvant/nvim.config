@@ -53,5 +53,16 @@ return {
         jdtls = lsp_zero.noop,
       }
     })
+
+    -- CodeWhisperer (See https://code.amazon.com/packages/CWLS/trees/mainline for setup)
+    lsp_zero.new_client({
+      name = 'codewhisperer',
+      cmd = { '/usr/local/bin/cwls' },
+      filetypes = { 'java', 'python', 'typescript', 'javascript', 'csharp', 'ruby', 'kotlin', 'shell', 'sql', 'c', 'cpp', 'go', 'rust' },
+      autostart = true,
+      root_dir = function()
+        return lsp_zero.dir.find_first({'Config'})
+      end
+    })
   end
 }
