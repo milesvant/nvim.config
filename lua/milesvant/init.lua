@@ -31,5 +31,14 @@ keymap_once("n", "<leader>o", "<cmd>tabnew<CR>")
 keymap_once("i", ",,", "<C-x><C-o>")
 
 -- Setup LSP
-require'lspconfig'.pyright.setup{}
 
+require("mason").setup({
+    ui = {
+        icons = {
+            package_installed = "",
+            package_pending = "",
+            package_uninstalled = "",
+        },
+    }
+})
+require("mason-lspconfig").setup()

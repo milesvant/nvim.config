@@ -4,8 +4,9 @@
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
-  -- Packer can manage itself
-  use 'wbthomason/packer.nvim'
+
+-- Packer can manage itself
+use 'wbthomason/packer.nvim'
 
 use {
   'nvim-telescope/telescope.nvim', tag = '0.1.4',
@@ -37,7 +38,9 @@ use {
     end
 }
 
-use 'neovim/nvim-lspconfig'
+use 'williamboman/mason.nvim'    
+use 'williamboman/mason-lspconfig.nvim'
 
 end)
+
 
